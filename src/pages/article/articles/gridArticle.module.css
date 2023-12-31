@@ -1,0 +1,48 @@
+.gridLayout {
+  margin: 0 auto;
+  padding: 2rem 13rem;
+  background-color: #f8fae5;
+  max-width: 1200px;
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-template-areas:
+    "... two ..."
+    "one two four"
+    "one three four"
+    "... three ...";
+  gap: 3rem;
+}
+.card {
+  width: 200px;
+  height: 200px;
+  border-radius: 9px;
+  text-align: center;
+  padding-block-start: 5rem;
+}
+.card:nth-child(1) {
+  background-color: #dc84f3;
+  grid-area: one;
+}
+.card:nth-child(2) {
+  background-color: #b4d4ff;
+  grid-area: two;
+}
+.card:nth-child(3) {
+  background-color: #86a789;
+  grid-area: three;
+}
+.card:nth-child(4) {
+  background-color: #bf3131;
+  grid-area: four;
+}
+
+@media (max-width: 800px) {
+  .gridLayout {
+    grid-template-areas:
+      "one"
+      "two"
+      "three"
+      "four";
+    gap: 3rem;
+  }
+}
