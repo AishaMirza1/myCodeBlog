@@ -1,4 +1,35 @@
 .heading1 {
-  font-size: 3rem;
-  color: #454545;
+  font-size: 5rem;
+  letter-spacing: 2px;
+  color: #255b98;
+  margin-bottom: 7rem;
+}
+.heading2 {
+  text-transform: capitalize;
+  font-size: 2rem;
+  letter-spacing: 1.8px;
+  color: #504f4f;
+  margin-bottom: 2rem;
+}
+.heading2 span {
+  background-color: #a5cc6b;
+  border-radius: 7px;
+  padding: 5px;
+}
+@media (max-width: 880px) {
+  .heading1 {
+    font-size: 4rem;
+  }
+  .heading2 {
+    font-size: 1.7rem;
+  }
+}
+@media (max-width: 493px) {
+  .heading1 {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+  }
+  .heading2 {
+    font-size: 1.4rem;
+  }
 }

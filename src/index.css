@@ -1,3 +1,16 @@
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+body {
+  font-family: Alaska, sans-serif;
+}
+p {
+  font-size: 1.4rem;
+  letter-spacing: -0.6px;
+  margin-top: 1rem;
 }

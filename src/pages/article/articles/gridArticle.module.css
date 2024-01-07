@@ -1,23 +1,78 @@
-.gridLayout {
+.articleContainer {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+}
+.article {
   margin: 0 auto;
-  padding: 2rem 13rem;
+}
+.gridLayout {
+  position: relative;
+  padding: 2rem;
   background-color: #f8fae5;
-  max-width: 1200px;
+  width: 500px;
   display: grid;
-  grid-auto-columns: 1fr;
   grid-template-areas:
     "... two ..."
     "one two four"
     "one three four"
     "... three ...";
   gap: 3rem;
+  border-radius: 21px;
 }
+.gridLayout::after {
+  content: ".gridLayout";
+  background-color: #bf3131;
+  padding: 5px;
+  font-size: 16px;
+  border-radius: 5px;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  right: -10%;
+}
+.gridLayout::before {
+  content: "";
+  background-color: #bf3131;
+  padding: 5px;
+  color: #fff;
+  position: absolute;
+  top: 7%;
+  right: 3%;
+  rotate: 45deg;
+}
+
 .card {
-  width: 200px;
-  height: 200px;
-  border-radius: 9px;
-  text-align: center;
-  padding-block-start: 5rem;
+  width: 100%;
+  height: 100px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  position: relative;
+}
+.card::after {
+  content: ".card";
+  background-color: #bf3131;
+  padding: 5px;
+  font-size: 16px;
+  border-radius: 5px;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  right: -10%;
+}
+.card::before {
+  content: "";
+  background-color: #bf3131;
+  padding: 5px;
+  color: #fff;
+  position: absolute;
+  top: 20%;
+  right: 0%;
+  rotate: 45deg;
 }
 .card:nth-child(1) {
   background-color: #dc84f3;
@@ -35,14 +90,119 @@
   background-color: #bf3131;
   grid-area: four;
 }
+.egContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+.egText {
+  background-color: #b4d4ff;
+  border-radius: 21px;
+  color: #000205;
+  text-align: left;
+  padding: 0rem 4rem;
+}
 
+.egText p {
+  margin-bottom: 0.4rem;
+  font-size: 1.1rem;
+}
+.egText p:nth-child(2),
+.egText p:nth-child(3),
+.egText p:nth-child(4),
+.egText p:nth-child(5),
+.egText p:nth-child(6) {
+  padding: 0 2rem;
+  position: relative;
+}
+
+.egText p:nth-child(3)::after,
+.egText p:nth-child(4)::after,
+.egText p:nth-child(5)::after,
+.egText p:nth-child(6)::after {
+  content: "card string values";
+  background-color: #000205;
+  padding: 1px 5px;
+  font-size: 11px;
+  color: #86a789;
+  border-radius: 5px;
+  position: absolute;
+  top: 115%;
+  left: -10%;
+}
+
+.egText p:nth-child(3)::before,
+.egText p:nth-child(4)::before,
+.egText p:nth-child(5)::before,
+.egText p:nth-child(6)::before {
+  content: "";
+  background-color: #000205;
+  padding: 5px;
+  position: absolute;
+  top: 110%;
+  left: 10%;
+  rotate: 45deg;
+}
+img {
+  display: inline-block;
+  margin: 2rem;
+  border-radius: 15px;
+}
+@media (max-width: 911px) {
+  .gridLayout {
+    gap: 2rem;
+    width: 400px;
+  }
+}
 @media (max-width: 800px) {
   .gridLayout {
-    grid-template-areas:
-      "one"
-      "two"
-      "three"
-      "four";
-    gap: 3rem;
+    gap: 1rem;
+  }
+  .egContainer {
+    gap: 1rem;
+  }
+}
+@media (max-width: 771px) {
+  .egContainer {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .gridLayout::after {
+    top: 0;
+    left: 0%;
+    width: fit-content;
+  }
+  .gridLayout::before {
+    top: 7%;
+    left: 3%;
+    width: 3px;
+    height: 3px;
+  }
+}
+@media (max-width: 531px) {
+  .egContainer {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .gridLayout {
+    width: 300px;
+  }
+  img {
+    width: 50%;
+    height: 50%;
+  }
+  .egText {
+    padding: 0rem 3rem;
+    width: 300px;
+  }
+}
+@media (max-width: 371px) {
+  .gridLayout {
+    width: 270px;
+  }
+  .egText {
+    padding: 0rem 2rem;
+    width: 270px;
   }
 }
