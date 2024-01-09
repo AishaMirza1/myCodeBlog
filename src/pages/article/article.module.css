@@ -1,14 +1,14 @@
 .article {
   width: 100vw;
-  padding: 2rem 3rem;
+  padding: 6rem 9rem;
+}
+@media (max-width: 871px) {
+  .article {
+    padding: 2rem 6rem;
+  }
 }
 @media (max-width: 771px) {
   .article {
     padding: 2rem 1rem;
-  }
-}
-@media (max-width: 471px) {
-  .article {
-    /* overflow-x: hidden; */
   }
 }

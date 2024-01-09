@@ -12,5 +12,9 @@ body {
 p {
   font-size: 1.4rem;
   letter-spacing: -0.6px;
-  margin-top: 1rem;
+}
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

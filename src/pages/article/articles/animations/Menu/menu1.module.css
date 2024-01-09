@@ -1,0 +1,65 @@
+.header {
+  position: fixed;
+  top: 50px;
+  right: 50px;
+}
+.menu {
+  position: relative;
+  background-color: #c9fd74;
+  border-radius: 25px;
+}
+.button {
+  height: 40px;
+  width: 100px;
+  cursor: pointer;
+  border-radius: 25px;
+  text-transform: uppercase;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: none;
+}
+.slider {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+.el {
+  height: 100%;
+  width: 100%;
+  background-color: #c9fd74;
+}
+.el:nth-child(2) {
+  position: absolute;
+  top: 100%;
+  background-color: #000;
+  color: #fff;
+}
+.el:hover .perspectiveText {
+  transform: rotateX(90deg);
+}
+.el:hover .perspectiveText p:nth-child(1) {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+.el:hover .perspectiveText p:nth-child(2) {
+  opacity: 1;
+}
+.perspectiveText {
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+  transition: transform 0.75s cubic-bezier(0.76, 0, 0.24, 1);
+  transform-style: preserve-3d;
+}
+.perspectiveText p {
+  font-size: 1.2rem;
+  transition: all 0.75s cubic-bezier(0.76, 0, 0.24, 1);
+}
+.perspectiveText p:nth-child(2) {
+  position: absolute;
+  transform: rotateX(-90deg) translateY(9px);
+  opacity: 0;
+  transform-origin: bottom center;
+}

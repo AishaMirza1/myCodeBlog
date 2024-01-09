@@ -1,9 +1,9 @@
-import Article from "./pages/article/Article";
 import "./index.css";
+import Menu1 from "./pages/article/articles/animations/Menu/Menu1";
 function App() {
   return (
     <>
-      <Article />
+      <Menu1 />
     </>
   );
 }

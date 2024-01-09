@@ -1,5 +1,5 @@
-import Heading1 from "../../../ui/Heading1";
-import Heading2 from "../../../ui/Heading2";
+import Heading1 from "../../../../ui/Heading1";
+import Heading2 from "../../../../ui/Heading2";
 import styles from "./gridArticle.module.css";
 import img1 from "./imgs/img.png";
 import img2 from "./imgs/img2.png";
