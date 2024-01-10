@@ -1,7 +1,8 @@
 import { useState } from "react";
 import styles from "./menu1.module.css";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import PropTypes from "prop-types";
+import Nav from "./Nav";
 export default function Menu1() {
   const [isActive, setIsActive] = useState(false);
   const variants = {
@@ -17,7 +18,7 @@ export default function Menu1() {
       height: 40,
       top: 0,
       right: 0,
-      transition: { duration: 0.75, ease: [0.76, 0, 0.24, 1] },
+      transition: { duration: 0.75, delay: 0.35, ease: [0.76, 0, 0.24, 1] },
     },
   };
   return (
@@ -27,7 +28,10 @@ export default function Menu1() {
         variants={variants}
         initial="closed"
         className={styles.menu}
-      ></motion.menu>
+      >
+        <AnimatePresence>{isActive && <Nav />}</AnimatePresence>
+      </motion.menu>
+
       <button
         onClick={() => setIsActive(!isActive)}
         className={`${styles.button}`}
