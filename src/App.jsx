@@ -1,9 +1,12 @@
 import "./index.css";
-import Menu1 from "./pages/article/articles/animations/Menu/Menu1";
+import Article from "./pages/article/Article";
+import Nav from "./ui/nav/Nav";
+
 function App() {
   return (
     <>
-      <Menu1 />
+      <Nav />
+      <Article />
     </>
   );
 }

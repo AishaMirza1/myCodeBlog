@@ -1,6 +1,7 @@
 .heading1 {
-  font-size: 5rem;
-  letter-spacing: 2px;
+  font-size: clamp(2.827rem, 1rem + 5vw, 5rem);
+  font-weight: 900;
+  letter-spacing: 0.2;
   color: #255b98;
   margin-bottom: 5rem;
 }
@@ -17,16 +18,12 @@
   padding: 5px;
 }
 @media (max-width: 880px) {
-  .heading1 {
-    font-size: 4rem;
-  }
   .heading2 {
     font-size: 1.7rem;
   }
 }
 @media (max-width: 493px) {
   .heading1 {
-    font-size: 3rem;
     margin-bottom: 3rem;
   }
   .heading2 {

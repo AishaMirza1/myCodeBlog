@@ -1,12 +1,9 @@
 import styles from "./article.module.css";
-import CardScroll from "./articles/animations/cardScroll/CardScroll";
-// import GridArticle from "../article/articles/gridArticle/GridArticle";
-
+import Heading1 from "../../ui/Heading1";
 export default function Article() {
   return (
     <main className={styles.article}>
-      {/* <GridArticle /> */}
-      <CardScroll />
+      <Heading1 heading="My Articles" />
     </main>
   );
 }

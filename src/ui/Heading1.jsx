@@ -1,4 +1,8 @@
 import styles from "./headings.module.css";
-export default function Heading1() {
-  return <h1 className={styles.heading1}>My Articles</h1>;
+import PropTypes from "prop-types";
+export default function Heading1({ heading }) {
+  return <h1 className={styles.heading1}>{heading}</h1>;
 }
+Heading1.propTypes = {
+  heading: PropTypes.string,
+};
