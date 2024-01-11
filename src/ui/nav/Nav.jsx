@@ -1,6 +1,6 @@
 import styles from "./nav.module.css";
 import { navLinks } from "./data";
-
+import { NavLink } from "react-router-dom";
 export default function Nav() {
   return (
     <nav className={styles.nav}>
@@ -8,13 +8,13 @@ export default function Nav() {
         {navLinks.map((link, i) => {
           return (
             <li key={i}>
-              <a
+              <NavLink
                 style={{ color: link.color }}
                 className={styles.a}
-                href={link.href}
+                to={link.href}
               >
                 {link.title}
-              </a>
+              </NavLink>
             </li>
           );
         })}

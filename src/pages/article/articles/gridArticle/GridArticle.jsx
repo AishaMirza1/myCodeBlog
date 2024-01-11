@@ -1,4 +1,3 @@
-import Heading1 from "../../../../ui/Heading1";
 import Heading2 from "../../../../ui/Heading2";
 import styles from "./gridArticle.module.css";
 import img1 from "./imgs/img.png";
@@ -7,7 +6,6 @@ import img3 from "./imgs/img3.png";
 export default function GridArticle() {
   return (
     <div className={styles.articleContainer}>
-      <Heading1 />
       <Heading2
         text="an easy way of making layouts with "
         spanText=" grid-template-areas"

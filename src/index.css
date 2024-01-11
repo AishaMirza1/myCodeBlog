@@ -21,3 +21,7 @@ p {
   justify-content: center;
   align-items: center;
 }
+main {
+  padding: 6rem 9rem;
+  margin: 3rem;
+}

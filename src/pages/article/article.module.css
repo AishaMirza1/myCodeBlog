@@ -1,8 +1,4 @@
-.article {
-  width: 100vw;
-  padding: 6rem 9rem;
-}
-@media (max-width: 871px) {
+/* @media (max-width: 871px) {
   .article {
     padding: 2rem 6rem;
   }
@@ -11,4 +7,4 @@
   .article {
     padding: 2rem 1rem;
   }
-}
+} */
