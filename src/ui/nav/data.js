@@ -2,28 +2,27 @@ export const navLinks = [
   {
     title: "Articles",
     href: "/articles",
-    color: "#304D30",
+    color: "#365486",
   },
   {
-    title: "codePen",
-    href: "/codePen",
+    title: "projects",
+    href: "/projects",
+    color: "#D63484",
+  },
+  {
+    title: "React",
+    href: "/react",
     color: "#BE3144",
   },
   {
-    title: "About",
-    href: "/about",
+    title: "Css",
+    href: "/css",
     color: "#43766C",
   },
 
   {
-    title: "Projects",
-    href: "/projects",
-    color: "#D63484",
-  },
-
-  {
-    title: "Contact",
-    href: "/contact",
-    color: "#392467",
+    title: "HTML",
+    href: "/html",
+    color: "#232D3F",
   },
 ];

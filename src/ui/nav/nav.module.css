@@ -21,12 +21,22 @@
   font-weight: 600;
   letter-spacing: -0.2px;
   text-transform: uppercase;
-  text-decoration-thickness: 0.2rem;
-  text-underline-offset: 0.25em;
-}
-.a:link:hover {
   text-decoration: none;
+  position: relative;
 }
-.a:active {
-  text-decoration-thickness: 0.4rem;
+.a span {
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  bottom: -3px;
+  transition: width 0.35s ease;
+  pointer-events: none;
+}
+
+.a:link:hover span {
+  width: 0;
+}
+.active {
+  color: #ffffff;
+  text-decoration-thickness: 4rem;
 }

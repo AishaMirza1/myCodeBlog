@@ -22,34 +22,36 @@ export default function Menu1() {
     },
   };
   return (
-    <header className={`${styles.header}`}>
-      <motion.menu
-        animate={isActive ? "open" : "closed"}
-        variants={variants}
-        initial="closed"
-        className={styles.menu}
-      >
-        <AnimatePresence>{isActive && <Nav />}</AnimatePresence>
-      </motion.menu>
-
-      <button
-        onClick={() => setIsActive(!isActive)}
-        className={`${styles.button}`}
-      >
-        <motion.div
-          animate={{ top: isActive ? "-100%" : "0" }}
-          transition={{ duration: 0.5, ease: [0.76, 0, 0.24, 1] }}
-          className={styles.slider}
+    <div className={styles.menuContainer}>
+      <header className={`${styles.header}`}>
+        <motion.menu
+          animate={isActive ? "open" : "closed"}
+          variants={variants}
+          initial="closed"
+          className={styles.menu}
         >
-          <div className={`${styles.el} `}>
-            <PerspectiveText label="Menu" />
-          </div>
-          <div className={`${styles.el}`}>
-            <PerspectiveText label="close" />
-          </div>
-        </motion.div>
-      </button>
-    </header>
+          <AnimatePresence>{isActive && <Nav />}</AnimatePresence>
+        </motion.menu>
+
+        <button
+          onClick={() => setIsActive(!isActive)}
+          className={`${styles.button}`}
+        >
+          <motion.div
+            animate={{ top: isActive ? "-100%" : "0" }}
+            transition={{ duration: 0.5, ease: [0.76, 0, 0.24, 1] }}
+            className={styles.slider}
+          >
+            <div className={`${styles.el} `}>
+              <PerspectiveText label="Menu" />
+            </div>
+            <div className={`${styles.el}`}>
+              <PerspectiveText label="close" />
+            </div>
+          </motion.div>
+        </button>
+      </header>
+    </div>
   );
 }
 function PerspectiveText({ label }) {

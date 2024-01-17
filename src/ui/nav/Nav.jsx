@@ -13,6 +13,7 @@ export default function Nav() {
                 className={styles.a}
                 to={link.href}
               >
+                <span style={{ backgroundColor: link.color }}></span>
                 {link.title}
               </NavLink>
             </li>

@@ -1,16 +1,17 @@
 .heading1 {
-  font-size: clamp(2.827rem, 1rem + 5vw, 5rem);
+  font-size: clamp(2.827rem, 1rem + 5vw, 9rem);
   font-weight: 900;
   letter-spacing: 0.2;
   color: #255b98;
   margin-bottom: 5rem;
+  text-transform: capitalize;
 }
 .heading2 {
   text-transform: capitalize;
-  font-size: 2rem;
+  font-size: 2.8rem;
   letter-spacing: 1.8px;
   color: #504f4f;
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
 }
 .heading2 span {
   background-color: #a5cc6b;
@@ -19,7 +20,7 @@
 }
 @media (max-width: 880px) {
   .heading2 {
-    font-size: 1.7rem;
+    font-size: 2.6rem;
   }
 }
 @media (max-width: 493px) {
@@ -27,6 +28,6 @@
     margin-bottom: 3rem;
   }
   .heading2 {
-    font-size: 1.4rem;
+    font-size: 2.4rem;
   }
 }
