@@ -1,11 +1,10 @@
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import "./index.css";
-import Article from "./pages/article/Article";
+import Components from "./pages/components/Components";
 import Css from "./pages/css/Css";
-import React from "./pages/React/React";
-import Projects from "./pages/projects/Projects";
 import Html from "./pages/html/Html";
 import Nav from "./ui/nav/Nav";
+import Javascript from "./pages/javascript/Javascript";
 
 function App() {
   return (
@@ -13,11 +12,10 @@ function App() {
       <BrowserRouter>
         <Nav />
         <Routes>
-          <Route index element={<Navigate replace to="articles" />} />
-          <Route path="/articles" element={<Article />}></Route>
+          <Route index element={<Navigate replace to="components" />} />
+          <Route path="/components" element={<Components />}></Route>
           <Route path="/css" element={<Css />} />
-          <Route path="/react" element={<React />} />
-          <Route path="/projects" element={<Projects />} />
+          <Route path="/javascript" element={<Javascript />} />
           <Route path="/html" element={<Html />} />
         </Routes>
       </BrowserRouter>

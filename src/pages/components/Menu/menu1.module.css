@@ -1,10 +1,17 @@
+.menuContainer {
+  position: relative;
+  border: 2px solid red;
+  height: 380px;
+  width: 1000px;
+  margin-left: auto;
+}
 .header {
-  position: fixed;
-  top: 50px;
-  right: 50px;
+  position: absolute;
+  top: 30px;
+  right: 30px;
 }
 .menu {
-  position: relative;
+  position: absolute;
   background-color: #c9fd74;
   border-radius: 25px;
 }
@@ -13,7 +20,7 @@
   width: 100px;
   cursor: pointer;
   border-radius: 25px;
-  text-transform: uppercase;
+  text-transform: capitalize;
   overflow: hidden;
   position: absolute;
   top: 0;
@@ -54,7 +61,7 @@
   transform-style: preserve-3d;
 }
 .perspectiveText p {
-  font-size: 1.2rem;
+  font-size: 1.8rem;
   transition: all 0.75s cubic-bezier(0.76, 0, 0.24, 1);
 }
 .perspectiveText p:nth-child(2) {

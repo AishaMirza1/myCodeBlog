@@ -1,12 +1,14 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import styles from "./headerVoid.module.css";
 
 import anime from "animejs";
 export default function HeaderVoid() {
   const [noOfDivs, setNoOfDivs] = useState(0);
+  const ref = useRef(null);
   const divsArray = [];
   const rowsArray = [];
   function handleMouseEnter(e) {
+    anime.remove(e.target);
     anime({
       targets: e.target,
       backgroundColor: [
@@ -15,13 +17,14 @@ export default function HeaderVoid() {
     });
   }
   function handleMouseLeave(e) {
+    anime.remove(e.target);
     anime({
       targets: e.target,
       backgroundColor: [
         {
           value: `rgba(129, 141, 248, 0)`,
           easing: "easeOutSine",
-          duration: 2400,
+          duration: 1500,
         },
       ],
     });
@@ -33,17 +36,20 @@ export default function HeaderVoid() {
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
         className={styles.void}
-        key={i}
+        key={`col-${Date.now()}-${i}`}
       ></div>
     );
   }
   for (let j = 0; j <= 8; j++) {
-    rowsArray.push(<div className={styles.voidRow}>{divsArray}</div>);
+    rowsArray.push(
+      <div className={styles.voidRow} key={`row-${Date.now()}-${j}`}>
+        {divsArray}
+      </div>
+    );
   }
   useEffect(() => {
     function updateDivs() {
-      let divs = window.innerWidth / 75;
-      console.log(divs);
+      let divs = ref.current.clientWidth / 75;
       setNoOfDivs(divs);
     }
     window.addEventListener("resize", updateDivs);
@@ -51,15 +57,13 @@ export default function HeaderVoid() {
     return () => window.removeEventListener("resize", updateDivs);
   }, []);
   return (
-    <header className={styles.headerVoidContainer}>
+    <header ref={ref} className={styles.headerVoidContainer}>
       <div className={styles.voidContainer}>{rowsArray}</div>
       <div className={styles.headerContent}>
         <h1>The Void Header</h1>
         <p>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam
-          expedita veritatis consequatur, ex cumque quo architecto error, iste,
-          asperiores reprehenderit quas voluptatum explicabo. Explicabo,
-          corporis qui asperiores suscipit est eum.
+          expedita veritatis consequatur, ex cumque quo architecto error, iste.
         </p>
         <button>Join Team</button>
       </div>

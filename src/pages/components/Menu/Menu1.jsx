@@ -1,6 +1,6 @@
 import { useState } from "react";
-import styles from "./menu1.module.css";
 import { AnimatePresence, motion } from "framer-motion";
+import styles from "./menu1.module.css";
 import PropTypes from "prop-types";
 import Nav from "./Nav";
 export default function Menu1() {
@@ -8,7 +8,7 @@ export default function Menu1() {
   const variants = {
     open: {
       width: 480,
-      height: 550,
+      height: 350,
       top: "-25px",
       right: "-25px",
       transition: { duration: 0.75, ease: [0.76, 0, 0.24, 1] },

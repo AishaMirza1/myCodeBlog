@@ -24,3 +24,7 @@ p {
 .container {
   padding: 6rem 9% 6rem 9%;
 }
+.active span {
+  top: 138%;
+  background-color: #ff0055;
+}
