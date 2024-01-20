@@ -1,10 +1,9 @@
 import Heading1 from "../../ui/Heading1";
-import { navLinks } from "../../ui/nav/data";
 
 export default function Javascript() {
   return (
     <main>
-      <Heading1 heading="React" color={navLinks[1].color} />
+      <Heading1 heading="React" />
     </main>
   );
 }

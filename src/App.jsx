@@ -3,14 +3,14 @@ import "./index.css";
 import Components from "./pages/components/Components";
 import Css from "./pages/css/Css";
 import Html from "./pages/html/Html";
-import Nav from "./ui/nav/Nav";
+import Header from "./ui/header/Header";
 import Javascript from "./pages/javascript/Javascript";
 
 function App() {
   return (
     <div className="app">
       <BrowserRouter>
-        <Nav />
+        <Header />
         <Routes>
           <Route index element={<Navigate replace to="components" />} />
           <Route path="/components" element={<Components />}></Route>

@@ -1,0 +1,54 @@
+.nav {
+  position: absolute;
+  width: 100%;
+  z-index: 0;
+  background-color: #ffffff;
+  top: 100%;
+  left: 0;
+}
+.nav ul {
+  display: flex;
+  gap: 3rem;
+  align-items: flex-start;
+  flex-direction: column;
+  list-style: none;
+  padding: 1rem;
+  perspective: 120px;
+  perspective-origin: top;
+  padding: 2rem 5rem;
+}
+
+.nav ul li a:link,
+.nav ul li a:visited,
+.nav ul li a:active,
+.nav ul li a:focus {
+  color: #666666;
+  font-size: 1.8rem;
+  font-weight: 600;
+  letter-spacing: -0.2px;
+  text-transform: capitalize;
+  text-decoration: none;
+  position: relative;
+}
+.nav ul li a:hover {
+  color: #262626;
+}
+/* mobile nav button */
+.navMobileBtn {
+  width: 45px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.navMobileBtn span {
+  display: inline-block;
+  width: 25px;
+  height: 3px;
+  background-color: #262626;
+  position: relative;
+}
