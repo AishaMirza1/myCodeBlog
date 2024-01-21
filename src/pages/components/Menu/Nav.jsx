@@ -1,5 +1,5 @@
 import styles from "./menu1.module.css";
-import { data } from "./data";
+import { navLinks } from "../../../data";
 import { motion } from "framer-motion";
 export default function Nav() {
   const perspective = {
@@ -28,7 +28,7 @@ export default function Nav() {
   return (
     <nav className={`${styles.nav} `}>
       <div className={`${styles.navBody}`}>
-        {data.map((list, i) => {
+        {navLinks.map((list, i) => {
           return (
             <div key={i} className={styles.perspectiveContainer}>
               <motion.div

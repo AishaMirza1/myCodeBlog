@@ -1,5 +1,5 @@
 import styles from "./nav.module.css";
-import { navLinks } from "./data";
+import { navLinks } from "../../data";
 import { NavLink } from "react-router-dom";
 export default function Nav() {
   return (
@@ -8,7 +8,11 @@ export default function Nav() {
         {navLinks.map((link, i) => {
           return (
             <li key={i}>
-              <NavLink to={link.href} activeclasscame="active">
+              <NavLink
+                to={link.href}
+                activeclasscame="active"
+                className={styles.perspectiveText}
+              >
                 {link.title}
                 <span className={styles.linkDecoration} />
               </NavLink>

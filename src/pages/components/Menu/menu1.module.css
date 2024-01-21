@@ -2,7 +2,7 @@
   position: relative;
   border: 2px solid red;
   height: 380px;
-  width: 1000px;
+  /* width: 1000px; */
   margin-left: auto;
 }
 .header {

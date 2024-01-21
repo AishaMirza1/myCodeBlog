@@ -5,6 +5,8 @@ import Css from "./pages/css/Css";
 import Html from "./pages/html/Html";
 import Header from "./ui/header/Header";
 import Javascript from "./pages/javascript/Javascript";
+import Hero from "./pages/components/hero/Hero";
+import Menu from "./pages/components/menus/Menu";
 
 function App() {
   return (
@@ -13,7 +15,10 @@ function App() {
         <Header />
         <Routes>
           <Route index element={<Navigate replace to="components" />} />
-          <Route path="/components" element={<Components />}></Route>
+          <Route path="/components" element={<Components />}>
+            <Route path="hero" element={<Hero />} />
+            <Route path="menu" element={<Menu />} />
+          </Route>
           <Route path="/css" element={<Css />} />
           <Route path="/javascript" element={<Javascript />} />
           <Route path="/html" element={<Html />} />

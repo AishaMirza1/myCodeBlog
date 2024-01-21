@@ -1,10 +1,12 @@
-import HeaderVoid from "./headers/HeaderVoid";
-// import Menu1 from "./Menu/Menu1";
+import { Outlet } from "react-router-dom";
+
+import SideNav from "../../ui/sideNavBar/SideNavBar";
+import styles from "./components.module.css";
 export default function Components() {
   return (
-    <main>
-      <HeaderVoid />
-      {/* <Menu1 /> */}
-    </main>
+    <div className={styles.componentsContainer}>
+      <SideNav />
+      <Outlet />
+    </div>
   );
 }

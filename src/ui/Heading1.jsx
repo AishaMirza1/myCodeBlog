@@ -1,4 +1,4 @@
-import styles from "./headings.module.css";
+import styles from "./ui.module.css";
 import PropTypes from "prop-types";
 export default function Heading1({ heading, color }) {
   return (

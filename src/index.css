@@ -28,3 +28,24 @@ p {
   top: 138%;
   background-color: #ff0055;
 }
+aside .active {
+  background-color: #9b69f1 !important;
+  color: #fff !important;
+}
+main {
+  height: calc(100vh - 49px);
+  overflow-y: scroll;
+}
+main::-webkit-scrollbar,
+aside::-webkit-scrollbar {
+  display: none;
+}
+main,
+aside {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+ul,
+ol {
+  list-style: none;
+}

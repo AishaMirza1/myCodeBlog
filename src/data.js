@@ -17,3 +17,14 @@ export const navLinks = [
     href: "/html",
   },
 ];
+
+export const sideNavLinks = [
+  {
+    title: "hero",
+    href: "hero",
+  },
+  {
+    title: "menu",
+    href: "menu",
+  },
+];

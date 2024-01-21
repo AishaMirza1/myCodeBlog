@@ -1,0 +1,7 @@
+.componentsContainer {
+  height: calc(100vh - 49px);
+  overflow: hidden;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 180px auto;
+}

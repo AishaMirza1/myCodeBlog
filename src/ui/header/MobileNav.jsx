@@ -1,5 +1,5 @@
 import styles from "./mobileNav.module.css";
-import { navLinks } from "./data";
+import { navLinks } from "../../data";
 import { NavLink } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
