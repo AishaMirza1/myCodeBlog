@@ -20,11 +20,15 @@ export const navLinks = [
 
 export const sideNavLinks = [
   {
-    title: "hero",
+    title: "Hero",
     href: "hero",
   },
   {
-    title: "menu",
+    title: "Menu",
     href: "menu",
+  },
+  {
+    title: "Forms",
+    href: "Forms",
   },
 ];

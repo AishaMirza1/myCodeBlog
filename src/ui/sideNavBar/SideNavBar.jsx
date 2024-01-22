@@ -12,6 +12,7 @@ export default function SideNav() {
             return (
               <li key={i}>
                 <NavLink to={link.href}>{link.title} </NavLink>
+                <div></div>
               </li>
             );
           })}

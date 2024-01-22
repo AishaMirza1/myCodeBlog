@@ -1,9 +1,14 @@
+import MainComponentsHeader from "../../../ui/MainComponentsHeader";
 import HeaderVoid from "./headers/HeaderVoid";
 
 export default function Hero() {
   return (
     <main>
-      <h1>Heros Page</h1>
+      <MainComponentsHeader heading="Heros" />
+      <div style={{ marginBottom: "8rem" }}>
+        <HeaderVoid />
+      </div>
+
       <HeaderVoid />
     </main>
   );

@@ -7,6 +7,7 @@ import Header from "./ui/header/Header";
 import Javascript from "./pages/javascript/Javascript";
 import Hero from "./pages/components/hero/Hero";
 import Menu from "./pages/components/menus/Menu";
+import Form from "./pages/components/forms/form1.jsx/Form";
 
 function App() {
   return (
@@ -16,8 +17,10 @@ function App() {
         <Routes>
           <Route index element={<Navigate replace to="components" />} />
           <Route path="/components" element={<Components />}>
-            <Route path="hero" element={<Hero />} />
+            {/* make a seperate index page for showing all components as cards for now hero is index */}
+            <Route index path="hero" element={<Hero />} />
             <Route path="menu" element={<Menu />} />
+            <Route path="forms" element={<Form />} />
           </Route>
           <Route path="/css" element={<Css />} />
           <Route path="/javascript" element={<Javascript />} />

@@ -24,24 +24,18 @@
   transform: translateY(-2px);
 }
 .heading1 {
-  font-size: clamp(2.827rem, 1rem + 5vw, 9rem);
-  font-weight: 900;
-  letter-spacing: 0.2;
-  color: #255b98;
-  margin-bottom: 5rem;
   text-transform: capitalize;
+  font-size: 4rem;
+  letter-spacing: 1.8px;
+  color: #000000;
+  margin-bottom: 3rem;
 }
 .heading2 {
   text-transform: capitalize;
-  font-size: 2.8rem;
-  letter-spacing: 1.8px;
-  color: #504f4f;
-  margin-bottom: 4rem;
-}
-.heading2 span {
-  background-color: #a5cc6b;
-  border-radius: 7px;
-  padding: 5px;
+  font-size: 2.4rem;
+
+  color: #242323;
+  margin-bottom: 1rem;
 }
 @media (max-width: 880px) {
   .heading2 {
@@ -55,4 +49,21 @@
   .heading2 {
     font-size: 2.4rem;
   }
+}
+.mainComponentsHeader button,
+.mainComponentsHeader span {
+  border: none;
+  background-color: transparent;
+  font-size: 1.4rem;
+  color: #504f4f;
+  margin-block: 1rem;
+}
+.mainComponentsHeader button {
+  cursor: pointer;
+}
+.mainComponentsHeader span {
+  pointer-events: none;
+}
+.mainComponentsHeader button:hover {
+  text-decoration: underline;
 }

@@ -1,5 +1,5 @@
 import styles from "./menu1.module.css";
-import { navLinks } from "../../../data";
+import { navLinks } from "../../../../data";
 import { motion } from "framer-motion";
 export default function Nav() {
   const perspective = {

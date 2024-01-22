@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import styles from "./headerVoid.module.css";
 
 import anime from "animejs";
+import Heading2 from "../../../../ui/Heading2";
 export default function HeaderVoid() {
   const [noOfDivs, setNoOfDivs] = useState(0);
   const ref = useRef(null);
@@ -57,16 +58,20 @@ export default function HeaderVoid() {
     return () => window.removeEventListener("resize", updateDivs);
   }, []);
   return (
-    <header ref={ref} className={styles.headerVoidContainer}>
-      <div className={styles.voidContainer}>{rowsArray}</div>
-      <div className={styles.headerContent}>
-        <h1>The Void Header</h1>
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam
-          expedita veritatis consequatur, ex cumque quo architecto error, iste.
-        </p>
-        <button>Join Team</button>
-      </div>
-    </header>
+    <>
+      <Heading2 text="Void Grid Header" />
+      <header ref={ref} className={styles.headerVoidContainer}>
+        <div className={styles.voidContainer}>{rowsArray}</div>
+        <div className={styles.headerContent}>
+          <h1>The Void Header</h1>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam
+            expedita veritatis consequatur, ex cumque quo architecto error,
+            iste.
+          </p>
+          <button>Join Team</button>
+        </div>
+      </header>
+    </>
   );
 }

@@ -1,9 +1,7 @@
 .headerVoidContainer {
   height: 675px;
   background-color: rgb(0, 0, 0);
-  margin-bottom: 200px;
   position: relative;
-
   margin-left: auto;
 }
 .headerVoidContainer .headerContent {

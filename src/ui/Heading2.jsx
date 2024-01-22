@@ -1,15 +1,9 @@
 import styles from "./ui.module.css";
 import PropTypes from "prop-types";
-export default function Heading1({ text, spanText }) {
-  return (
-    <h1 className={styles.heading2}>
-      {text}
-      <span>{spanText}</span>
-    </h1>
-  );
+export default function Heading2({ text }) {
+  return <h2 className={styles.heading2}>{text}</h2>;
 }
 
-Heading1.propTypes = {
+Heading2.propTypes = {
   text: PropTypes.string,
-  spanText: PropTypes.string,
 };
