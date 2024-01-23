@@ -19,7 +19,7 @@ export default function Heading1({ text }) {
       initial="initial"
       animate="enter"
     >
-      {text.split("").map((char, i) => {
+      {text?.split("").map((char, i) => {
         return (
           <motion.span variants={variants} key={i}>
             {char}

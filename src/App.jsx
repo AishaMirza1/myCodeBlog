@@ -8,6 +8,7 @@ import Javascript from "./pages/javascript/Javascript";
 import Hero from "./pages/components/hero/Hero";
 import Menu from "./pages/components/menus/Menu";
 import Form from "./pages/components/forms/form1.jsx/Form";
+import TextAnimationsMain from "./pages/components/text/TextAnimationsMain";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
             <Route index path="hero" element={<Hero />} />
             <Route path="menu" element={<Menu />} />
             <Route path="forms" element={<Form />} />
+            <Route path="text" element={<TextAnimationsMain />} />
           </Route>
           <Route path="/css" element={<Css />} />
           <Route path="/javascript" element={<Javascript />} />

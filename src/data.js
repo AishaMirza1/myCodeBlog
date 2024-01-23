@@ -28,6 +28,10 @@ export const sideNavLinks = [
     href: "menu",
   },
   {
+    title: "Text",
+    href: "text",
+  },
+  {
     title: "Forms",
     href: "Forms",
   },
