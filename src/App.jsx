@@ -7,7 +7,7 @@ import Header from "./ui/header/Header";
 import Javascript from "./pages/javascript/Javascript";
 import Hero from "./pages/components/hero/Hero";
 import Menu from "./pages/components/menus/Menu";
-import Form from "./pages/components/forms/form1.jsx/Form";
+import FormsContainer from "./pages/components/forms/FormsContainer";
 import TextAnimationsMain from "./pages/components/text/TextAnimationsMain";
 
 function App() {
@@ -21,7 +21,7 @@ function App() {
             {/* make a seperate index page for showing all components as cards for now hero is index */}
             <Route index path="hero" element={<Hero />} />
             <Route path="menu" element={<Menu />} />
-            <Route path="forms" element={<Form />} />
+            <Route path="forms" element={<FormsContainer />} />
             <Route path="text" element={<TextAnimationsMain />} />
           </Route>
           <Route path="/css" element={<Css />} />
