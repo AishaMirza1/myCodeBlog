@@ -10,12 +10,10 @@
   overflow: hidden;
 }
 .form1 {
-  background-color: rgb(124 58 237);
-  /* background-color: rgb(79 70 229); */
   padding: 2rem 3rem;
   position: relative;
   z-index: 99;
-  width: 550px;
+  width: 53%;
 }
 .form1 h3 {
   font-size: 3.8rem;
@@ -26,6 +24,7 @@
   flex-direction: column;
   margin-block: 1rem;
   align-items: flex-start;
+  margin-bottom: 2rem;
 }
 .inputDiv label {
   font-size: 2.3rem;
@@ -39,8 +38,6 @@
   border-radius: 9px;
   width: 100%;
   border: none;
-  background-color: rgb(109 40 217);
-  /* background-color: rgb(67 56 202); */
   font-size: 2rem;
   color: #ffffff;
   padding: 0.5rem 1rem;
@@ -89,4 +86,51 @@
   background-size: cover;
   display: inline-block;
   min-height: 700px;
+}
+
+/* toggle tab checkbox */
+
+.switch {
+  position: relative;
+  width: 210px;
+  height: 40px;
+  background-color: transparent;
+  border: 1px solid #fff;
+  border-radius: 0.71em;
+  overflow: hidden;
+}
+.switch input {
+  appearance: none;
+  width: 200px;
+  height: 40px;
+}
+.switch input::before,
+.switch input::after {
+  font-size: 0.73em;
+  position: absolute;
+  transform: translateY(-50%);
+  top: 50%;
+  font-weight: 550;
+}
+.switch input::after {
+  color: #6d28d9;
+}
+.switch input:checked::after {
+  color: #fff;
+}
+.switch input:checked::before {
+  color: #4338ca;
+}
+.switch input::after {
+  content: "An individual";
+}
+.switch input::before {
+  content: "A company";
+  left: 57%;
+}
+.switch span {
+  width: 110px;
+  height: 38.6px;
+  position: absolute;
+  background-color: #ffffff;
 }
