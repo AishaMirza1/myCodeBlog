@@ -50,8 +50,8 @@ function InclineTextAnimation({ text }) {
     enter: (i) => ({
       y: "-5.8rem",
       transition: {
-        duration: 0.2,
-        delay: i * 0.098,
+        duration: 0.4,
+        delay: i * 0.05,
         ease: [0.5, 0.465, 0.87, 0.9],
       },
     }),
