@@ -1,0 +1,68 @@
+.section {
+  position: relative;
+}
+.headerParallelScroll {
+  height: 170vh;
+  background-color: #000000ea;
+  position: relative;
+  z-index: 9;
+  overflow: hidden;
+  text-align: center;
+  margin-bottom: 100vh;
+}
+.headerParallelScroll img {
+  position: absolute;
+  height: 350px;
+  width: 25%;
+  object-fit: cover;
+  border-radius: 9px;
+}
+/* .headerParallelScroll h1 {
+  font-size: clamp(3rem, 0.2rem + 6vw, 6.5rem);
+  font-family: monospace;
+  font-weight: 500;
+  color: #fff;
+  width: 75%;
+  margin-top: 14rem;
+  position: fixed;
+  left: 50%;
+  background-color: red;
+  transform: translateX(-50%);
+  z-index: 20;
+} */
+.img:nth-child(1) {
+  left: 1%;
+}
+.img:nth-child(1),
+.img:nth-child(4) {
+  top: 30%;
+}
+.img:nth-child(3),
+.img:nth-child(2) {
+  top: 39%;
+}
+.img:nth-child(4) {
+  right: 1%;
+}
+.img:nth-child(3) {
+  left: 6%;
+}
+.img:nth-child(2) {
+  right: 6%;
+}
+.img:nth-child(5) {
+  right: 4%;
+}
+.img:nth-child(6) {
+  left: 4%;
+}
+.img:nth-child(5),
+.img:nth-child(6) {
+  bottom: -20%;
+}
+.img:nth-child(3),
+.img:nth-child(3),
+.img:nth-child(5),
+.img:nth-child(6) {
+  z-index: 30;
+}

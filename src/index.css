@@ -64,3 +64,6 @@ ul,
 ol {
   list-style: none;
 }
+section {
+  margin-bottom: 9rem;
+}

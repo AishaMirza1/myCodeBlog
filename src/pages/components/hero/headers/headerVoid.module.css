@@ -31,6 +31,7 @@
   line-height: 1.5;
   letter-spacing: 0.8px;
   margin-bottom: 4rem;
+  margin-inline: 8rem;
 }
 .headerContent button {
   background-color: #818df8;

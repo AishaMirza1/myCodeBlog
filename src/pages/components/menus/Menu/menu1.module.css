@@ -1,14 +1,13 @@
 .menuContainer {
   position: relative;
-  border: 2px solid red;
-  height: 380px;
-  /* width: 1000px; */
-  margin-left: auto;
+  height: 400px;
+  background-color: rgb(15 23 42);
+  border-radius: 15px;
 }
 .header {
   position: absolute;
-  top: 30px;
-  right: 30px;
+  top: 60px;
+  right: 200px;
 }
 .menu {
   position: absolute;

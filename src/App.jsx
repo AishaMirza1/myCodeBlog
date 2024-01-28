@@ -4,7 +4,7 @@ import Components from "./pages/components/Components";
 import Css from "./pages/css/Css";
 import Html from "./pages/html/Html";
 import Header from "./ui/header/Header";
-import Javascript from "./pages/javascript/Javascript";
+import ScrollAnimations from "./pages/javascript/ScrollAnimations";
 import Hero from "./pages/components/hero/Hero";
 import Menu from "./pages/components/menus/Menu";
 import FormsContainer from "./pages/components/forms/FormsContainer";
@@ -25,7 +25,7 @@ function App() {
             <Route path="text" element={<TextAnimationsMain />} />
           </Route>
           <Route path="/css" element={<Css />} />
-          <Route path="/javascript" element={<Javascript />} />
+          <Route path="/scroll-animations" element={<ScrollAnimations />} />
           <Route path="/html" element={<Html />} />
         </Routes>
       </BrowserRouter>

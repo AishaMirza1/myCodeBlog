@@ -58,7 +58,7 @@ export default function HeaderVoid() {
     return () => window.removeEventListener("resize", updateDivs);
   }, []);
   return (
-    <>
+    <section>
       <Heading2 text="Void Grid Header" />
       <header ref={ref} className={styles.headerVoidContainer}>
         <div className={styles.voidContainer}>{rowsArray}</div>
@@ -72,6 +72,6 @@ export default function HeaderVoid() {
           <button>Join Team</button>
         </div>
       </header>
-    </>
+    </section>
   );
 }

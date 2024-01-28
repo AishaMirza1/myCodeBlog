@@ -4,8 +4,8 @@ export const navLinks = [
     href: "/components",
   },
   {
-    title: "Javascript",
-    href: "/javascript",
+    title: "scroll Animations",
+    href: "/scroll-animations",
   },
   {
     title: "Css",

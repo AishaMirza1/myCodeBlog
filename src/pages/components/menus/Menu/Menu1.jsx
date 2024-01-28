@@ -23,7 +23,7 @@ export default function Menu1() {
     },
   };
   return (
-    <>
+    <section>
       <Heading2 text="side menu" />
       <div className={styles.menuContainer}>
         <header className={`${styles.header}`}>
@@ -55,7 +55,7 @@ export default function Menu1() {
           </button>
         </header>
       </div>
-    </>
+    </section>
   );
 }
 function PerspectiveText({ label }) {
