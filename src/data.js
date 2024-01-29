@@ -7,15 +7,6 @@ export const navLinks = [
     title: "scroll Animations",
     href: "/scroll-animations",
   },
-  {
-    title: "Css",
-    href: "/css",
-  },
-
-  {
-    title: "HTML",
-    href: "/html",
-  },
 ];
 
 export const sideNavLinks = [

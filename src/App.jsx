@@ -1,16 +1,22 @@
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import "./index.css";
 import Components from "./pages/components/Components";
-import Css from "./pages/css/Css";
-import Html from "./pages/html/Html";
 import Header from "./ui/header/Header";
 import ScrollAnimations from "./pages/javascript/ScrollAnimations";
 import Hero from "./pages/components/hero/Hero";
 import Menu from "./pages/components/menus/Menu";
 import FormsContainer from "./pages/components/forms/FormsContainer";
 import TextAnimationsMain from "./pages/components/text/TextAnimationsMain";
-
+import Lenis from "@studio-freight/lenis";
 function App() {
+  // smooth scroll lenis
+  const lenis = new Lenis();
+  function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+  }
+
+  requestAnimationFrame(raf);
   return (
     <div className="app">
       <BrowserRouter>
@@ -24,9 +30,8 @@ function App() {
             <Route path="forms" element={<FormsContainer />} />
             <Route path="text" element={<TextAnimationsMain />} />
           </Route>
-          <Route path="/css" element={<Css />} />
+
           <Route path="/scroll-animations" element={<ScrollAnimations />} />
-          <Route path="/html" element={<Html />} />
         </Routes>
       </BrowserRouter>
     </div>

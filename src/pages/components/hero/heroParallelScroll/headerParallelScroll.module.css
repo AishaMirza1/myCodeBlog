@@ -1,14 +1,23 @@
 .section {
   position: relative;
+  margin-bottom: 0;
 }
+.overlay {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  background-color: #000000;
+  z-index: 9999;
+}
+
 .headerParallelScroll {
   height: 170vh;
-  background-color: #000000ea;
+  background-color: #000000c5;
   position: relative;
-  z-index: 9;
+  z-index: 999;
   overflow: hidden;
   text-align: center;
-  margin-bottom: 100vh;
 }
 .headerParallelScroll img {
   position: absolute;
@@ -17,52 +26,87 @@
   object-fit: cover;
   border-radius: 9px;
 }
-/* .headerParallelScroll h1 {
-  font-size: clamp(3rem, 0.2rem + 6vw, 6.5rem);
+.stickyContent {
+  position: fixed;
+  top: 20%;
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.stickyContent h1 {
+  font-size: clamp(3rem, 0.2rem + 5.5vw, 7rem);
+  line-height: 1.4;
   font-family: monospace;
   font-weight: 500;
   color: #fff;
   width: 75%;
-  margin-top: 14rem;
-  position: fixed;
-  left: 50%;
-  background-color: red;
-  transform: translateX(-50%);
-  z-index: 20;
-} */
-.img:nth-child(1) {
+}
+.callToAction {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  margin-block: 4rem;
+}
+.callToAction button {
+  border-radius: 2em;
+  padding: 1.5rem 2rem;
+  border: none;
+  font-weight: 600;
+  font-size: 1.5rem;
+  cursor: pointer;
+  pointer-events: visible;
+  cursor: pointer;
+}
+.callToAction button:nth-child(2) {
+  background-color: gray;
+  color: #fff;
+}
+.imgOverlay {
+  position: absolute;
+  height: 100%;
+  width: 100vw;
+  z-index: 10;
+  top: 0;
+  background-color: #000000a6;
+}
+
+.img1 {
   left: 1%;
 }
-.img:nth-child(1),
-.img:nth-child(4) {
-  top: 30%;
+.img1,
+.img4 {
+  top: 35%;
 }
-.img:nth-child(3),
-.img:nth-child(2) {
-  top: 39%;
+.img3,
+.img2 {
+  top: 42%;
 }
-.img:nth-child(4) {
+.img4 {
   right: 1%;
+  z-index: 30;
 }
-.img:nth-child(3) {
+.img3 {
   left: 6%;
 }
-.img:nth-child(2) {
+.img2 {
   right: 6%;
 }
-.img:nth-child(5) {
-  right: 4%;
+.img5 {
+  right: 2%;
 }
-.img:nth-child(6) {
-  left: 4%;
+.img6 {
+  left: 2%;
 }
-.img:nth-child(5),
-.img:nth-child(6) {
+.img5,
+.img6 {
   bottom: -20%;
 }
-.img:nth-child(3),
-.img:nth-child(3),
-.img:nth-child(5),
-.img:nth-child(6) {
+.img3,
+.img4,
+.img5,
+.img6 {
   z-index: 30;
 }
