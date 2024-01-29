@@ -8,7 +8,7 @@
   position: absolute;
   top: 0;
   background-color: #000000;
-  z-index: 9999;
+  z-index: 10000;
 }
 
 .headerParallelScroll {
@@ -73,40 +73,40 @@
   background-color: #000000a6;
 }
 
-.img1 {
+.imgContainer img:nth-child(1) {
   left: 1%;
 }
-.img1,
-.img4 {
-  top: 35%;
+.imgContainer img:nth-child(1),
+.imgContainer img:nth-child(4) {
+  top: 30%;
 }
-.img3,
-.img2 {
+.imgContainer img:nth-child(3),
+.imgContainer img:nth-child(2) {
   top: 42%;
 }
-.img4 {
+.imgContainer img:nth-child(4) {
   right: 1%;
   z-index: 30;
 }
-.img3 {
+.imgContainer img:nth-child(3) {
   left: 6%;
 }
-.img2 {
+.imgContainer img:nth-child(2) {
   right: 6%;
 }
-.img5 {
+.imgContainer img:nth-child(5) {
   right: 2%;
 }
-.img6 {
+.imgContainer img:nth-child(6) {
   left: 2%;
 }
-.img5,
-.img6 {
+.imgContainer img:nth-child(5),
+.imgContainer img:nth-child(6) {
   bottom: -20%;
 }
-.img3,
-.img4,
-.img5,
-.img6 {
+.imgContainer img:nth-child(3),
+.imgContainer img:nth-child(4),
+.imgContainer img:nth-child(5),
+.imgContainer img:nth-child(6) {
   z-index: 30;
 }

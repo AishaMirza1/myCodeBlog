@@ -20,7 +20,7 @@ export default function Form1() {
     exit: { y: -2 },
   };
   return (
-    <section>
+    <div>
       <Heading2 text="Login / SignUp Form Transition" />
       <div className={styles.form1Container}>
         <div className={styles.form1ContainerInner}>
@@ -133,6 +133,6 @@ export default function Form1() {
           </motion.div>
         </div>
       </div>
-    </section>
+    </div>
   );
 }

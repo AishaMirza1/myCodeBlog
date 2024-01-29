@@ -26,4 +26,112 @@ export const sideNavLinks = [
     title: "Forms",
     href: "Forms",
   },
+  {
+    title: "Menu",
+    href: "menu",
+  },
+  {
+    title: "Text",
+    href: "text",
+  },
+  {
+    title: "Forms",
+    href: "Forms",
+  },
+  {
+    title: "Menu",
+    href: "menu",
+  },
+  {
+    title: "Text",
+    href: "text",
+  },
+  {
+    title: "Forms",
+    href: "Forms",
+  },
+  {
+    title: "Menu",
+    href: "menu",
+  },
+  {
+    title: "Text",
+    href: "text",
+  },
+  {
+    title: "Forms",
+    href: "Forms",
+  },
+  {
+    title: "Menu",
+    href: "menu",
+  },
+  {
+    title: "Text",
+    href: "text",
+  },
+  {
+    title: "Forms",
+    href: "Forms",
+  },
+  {
+    title: "Menu",
+    href: "menu",
+  },
+  {
+    title: "Text",
+    href: "text",
+  },
+  {
+    title: "Forms",
+    href: "Forms",
+  },
+  {
+    title: "Menu",
+    href: "menu",
+  },
+  {
+    title: "Text",
+    href: "text",
+  },
+  {
+    title: "Forms",
+    href: "Forms",
+  },
+  {
+    title: "Menu",
+    href: "menu",
+  },
+  {
+    title: "Text",
+    href: "text",
+  },
+  {
+    title: "Forms",
+    href: "Forms",
+  },
+  {
+    title: "Menu",
+    href: "menu",
+  },
+  {
+    title: "Text",
+    href: "text",
+  },
+  {
+    title: "Forms",
+    href: "Forms",
+  },
+  {
+    title: "Menu",
+    href: "menu",
+  },
+  {
+    title: "Text",
+    href: "text",
+  },
+  {
+    title: "Forms",
+    href: "Forms",
+  },
 ];

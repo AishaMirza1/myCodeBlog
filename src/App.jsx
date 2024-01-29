@@ -7,18 +7,9 @@ import Hero from "./pages/components/hero/Hero";
 import Menu from "./pages/components/menus/Menu";
 import FormsContainer from "./pages/components/forms/FormsContainer";
 import TextAnimationsMain from "./pages/components/text/TextAnimationsMain";
-import Lenis from "@studio-freight/lenis";
 function App() {
-  // smooth scroll lenis
-  const lenis = new Lenis();
-  function raf(time) {
-    lenis.raf(time);
-    requestAnimationFrame(raf);
-  }
-
-  requestAnimationFrame(raf);
   return (
-    <div className="app">
+    <div>
       <BrowserRouter>
         <Header />
         <Routes>
