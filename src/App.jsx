@@ -7,6 +7,7 @@ import Hero from "./pages/components/hero/Hero";
 import Menu from "./pages/components/menus/Menu";
 import FormsContainer from "./pages/components/forms/FormsContainer";
 import TextAnimationsMain from "./pages/components/text/TextAnimationsMain";
+import Buttons from "./pages/components/buttons/Buttons";
 function App() {
   return (
     <div>
@@ -20,6 +21,7 @@ function App() {
             <Route path="menu" element={<Menu />} />
             <Route path="forms" element={<FormsContainer />} />
             <Route path="text" element={<TextAnimationsMain />} />
+            <Route path="buttons" element={<Buttons />} />
           </Route>
 
           <Route path="/scroll-animations" element={<ScrollAnimations />} />
