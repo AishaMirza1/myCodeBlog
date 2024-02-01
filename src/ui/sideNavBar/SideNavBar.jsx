@@ -5,7 +5,9 @@ import { NavLink } from "react-router-dom";
 export default function SideNav() {
   return (
     <aside className={styles.sideNav}>
-      <p>All Components</p>
+      <p>
+        <NavLink to="">All Components</NavLink>
+      </p>
       <nav>
         <ul>
           {sideNavLinks.map((link, i) => {

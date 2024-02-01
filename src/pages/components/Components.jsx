@@ -6,6 +6,7 @@ export default function Components() {
   return (
     <div className={styles.componentsContainer}>
       <SideNav />
+
       <Outlet />
     </div>
   );

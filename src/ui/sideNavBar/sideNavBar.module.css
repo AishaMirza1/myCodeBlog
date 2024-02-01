@@ -6,12 +6,13 @@
 }
 .sideNav p {
   padding: 1rem 0;
-  font-size: 2rem;
+  font-size: 1.6rem;
   font-weight: 600;
 }
-.active {
-  background-color: #ff0055;
+.sideNav p a {
+  color: #755aec;
 }
+
 .sideNav nav ul li {
   display: flex;
   align-items: center;

@@ -8,6 +8,7 @@ import Menu from "./pages/components/menus/Menu";
 import FormsContainer from "./pages/components/forms/FormsContainer";
 import TextAnimationsMain from "./pages/components/text/TextAnimationsMain";
 import Buttons from "./pages/components/buttons/Buttons";
+import AllComponentsCardsContainer from "./pages/components/AllComponentsCardsContainer";
 function App() {
   return (
     <div>
@@ -16,8 +17,8 @@ function App() {
         <Routes>
           <Route index element={<Navigate replace to="components" />} />
           <Route path="/components" element={<Components />}>
-            {/* make a seperate index page for showing all components as cards for now hero is index */}
-            <Route index path="hero" element={<Hero />} />
+            <Route index element={<AllComponentsCardsContainer />} />
+            <Route path="hero" element={<Hero />} />
             <Route path="menu" element={<Menu />} />
             <Route path="forms" element={<FormsContainer />} />
             <Route path="text" element={<TextAnimationsMain />} />

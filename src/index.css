@@ -28,7 +28,7 @@ p {
   top: 138%;
   background-color: #ff0055;
 }
-aside .active {
+aside li .active {
   background-image: linear-gradient(
     90deg,
     #3713d6,
@@ -42,6 +42,7 @@ aside .active {
   transition-duration: 0.15s !important;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) !important;
 }
+
 aside .active:hover {
   transform: translateY(-3px) scale(1.005);
 }
@@ -66,4 +67,7 @@ ol {
 }
 section {
   margin-bottom: 9rem;
+}
+a:link {
+  text-decoration: none;
 }
