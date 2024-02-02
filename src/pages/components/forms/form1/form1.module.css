@@ -134,3 +134,19 @@
   position: absolute;
   background-color: #ffffff;
 }
+
+@media screen and (max-width: 632px) {
+  .form1 {
+    padding: 2rem 3rem;
+    position: relative;
+    z-index: 99;
+    width: 100%;
+  }
+  .formImgContainer {
+    display: none;
+  }
+  .form1 h3 {
+    font-size: 3.2rem;
+    margin-bottom: 2rem;
+  }
+}
