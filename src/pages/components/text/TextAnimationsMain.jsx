@@ -1,4 +1,3 @@
-import styles from "./textAnimationsMain.module.css";
 import MainComponentsHeader from "../../../ui/MainComponentsHeader";
 import TextAnimations, {
   PopTextAnimation,
@@ -6,7 +5,7 @@ import TextAnimations, {
 import { InclineTextAnimation } from "./flickeringText/TextAnimations";
 export default function TextAnimationsMain() {
   return (
-    <main className={styles.textAnimations}>
+    <main>
       <MainComponentsHeader heading="Text Animations" />
       <InclineTextAnimation text="LONDON" />
       <PopTextAnimation text="MUMBAI" />

@@ -1,5 +1,5 @@
 import HeaderParallelScroll from "../components/hero/heroParallelScroll/HeaderParallelScroll";
-import styles from "./scrollAnimation.module.css";
+
 // import Lenis from "@studio-freight/lenis";
 
 export default function Javascript() {
@@ -12,7 +12,7 @@ export default function Javascript() {
 
   // requestAnimationFrame(raf);
   return (
-    <div className={styles.scrollAnimationMain}>
+    <div>
       <HeaderParallelScroll />
     </div>
   );

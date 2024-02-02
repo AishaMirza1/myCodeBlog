@@ -10,9 +10,14 @@ export default function Heading1({ text }) {
       animate="enter"
     >
       {text.split(" ").map((word, i) => {
+        const notOfWords = text.split("").length;
+        console.log(notOfWords);
         return (
           <span key={i} style={{ display: "inline" }}>
             {word.split("").map((char, i) => {
+              var j = 0;
+              j = j + 1;
+              console.log(j);
               return (
                 <motion.span
                   style={{ display: "inline-block" }}
