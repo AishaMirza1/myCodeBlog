@@ -1,4 +1,5 @@
 import svg1 from "/medal-icon.svg";
+
 import svg2 from "/menu-outline.svg";
 import svg5 from "/folder-outline.svg";
 import svg3 from "/document-text-outline.svg";

@@ -7,7 +7,7 @@ import { InclineTextAnimation } from "./flickeringText/TextAnimations";
 export default function TextAnimationsMain() {
   return (
     <main className={styles.textAnimations}>
-      <MainComponentsHeader heading="TextAnimations" />
+      <MainComponentsHeader heading="Text Animations" />
       <InclineTextAnimation text="LONDON" />
       <PopTextAnimation text="MUMBAI" />
       <TextAnimations

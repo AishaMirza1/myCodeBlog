@@ -2,28 +2,36 @@ import styles from "./ui.module.css";
 import PropTypes from "prop-types";
 import { motion } from "framer-motion";
 export default function Heading1({ text }) {
-  const variants = {
-    initial: {
-      opacity: 0,
-      y: -5,
-    },
-    enter: {
-      opacity: 1,
-      y: 0,
-    },
-  };
   return (
     <motion.h1
-      className={styles.heading1}
-      transition={{ staggerChildren: 0.1 }}
+      className={styles.h1}
+      transition={{ staggerChildren: 0.03 }}
       initial="initial"
       animate="enter"
     >
-      {text?.split("").map((char, i) => {
+      {text.split(" ").map((word, i) => {
         return (
-          <motion.span variants={variants} key={i}>
-            {char}
-          </motion.span>
+          <span key={i} style={{ display: "inline" }}>
+            {word.split("").map((char, i) => {
+              return (
+                <motion.span
+                  style={{ display: "inline-block" }}
+                  variants={{
+                    initial: {
+                      y: "30%",
+                      opacity: 0,
+                    },
+                    enter: { opacity: 1, y: 0 },
+                  }}
+                  key={`char-${i}`}
+                  transition={{ duration: 0.24, ease: "linear" }}
+                >
+                  {char}
+                </motion.span>
+              );
+            })}
+            <span>&nbsp;</span>
+          </span>
         );
       })}
     </motion.h1>
