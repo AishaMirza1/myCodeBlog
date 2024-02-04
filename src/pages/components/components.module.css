@@ -15,7 +15,7 @@
   max-width: 80vw;
   display: grid;
   gap: 2rem;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   margin: 0 auto;
 }
 .card {
@@ -58,7 +58,7 @@
 }
 @media screen and (max-width: 1150px) {
   .cardsContainer {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
   }
 }
@@ -71,7 +71,8 @@
     display: none;
   }
   .cardsContainer {
-    gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
   }
 }
 @media (max-width: 480px) {

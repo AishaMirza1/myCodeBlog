@@ -33,7 +33,6 @@
 
   padding: 0.6rem 1.6rem;
   border-radius: 9px;
-  transition: background-color 0.23s linear;
   display: inline-block;
 }
 .sideNav ul li a:hover {

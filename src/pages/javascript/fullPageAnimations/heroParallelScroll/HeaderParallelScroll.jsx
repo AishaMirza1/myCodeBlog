@@ -75,7 +75,7 @@ export default function HeaderParallelScroll() {
           </div>
         </motion.div>
       </section>
-      <section
+      <div
         style={{
           height: "100vh",
           backgroundColor: "#7C3AED",
@@ -88,7 +88,7 @@ export default function HeaderParallelScroll() {
         <h2 style={{ fontSize: "5rem", color: "#fff" }}>
           Rest of website!!!!!!!
         </h2>
-      </section>
+      </div>
     </>
   );
 }

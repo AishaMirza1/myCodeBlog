@@ -4,7 +4,7 @@ import Heading2 from "../../../../ui/Heading2";
 import styles from "./menuButton.module.css";
 export default function MenuButtons() {
   const [isOpen, setIsOpen] = useState(false);
-  const [hamburgerMenyScope, animate] = useAnimate();
+  const [hamburgerMenuScope, animate] = useAnimate();
   const handleClickOpen = async () => {
     animate("#span1", { top: "48%" }, { duration: 0.35 });
     animate("#span3", { top: "48%" }, { duration: 0.35 });
@@ -28,7 +28,7 @@ export default function MenuButtons() {
   return (
     <div>
       <Heading2 text="Hamburger Menu" />
-      <div ref={hamburgerMenyScope} className={`flex ${styles.menuButton}`}>
+      <div ref={hamburgerMenuScope} className={`flex ${styles.menuButton}`}>
         <button onClick={() => setIsOpen(!isOpen)}>
           <div>
             <span id="span1"></span>
