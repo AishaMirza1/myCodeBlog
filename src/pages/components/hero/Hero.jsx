@@ -6,6 +6,7 @@ export default function Hero() {
   return (
     <main>
       <MainComponentsHeader heading="Heros" />
+
       <Header1 />
       <HeaderVoid />
     </main>

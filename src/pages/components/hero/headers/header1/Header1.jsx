@@ -10,39 +10,66 @@ export default function Header1() {
   return (
     <section>
       <Heading2 text="Smooth Loading Transitions" />
-      <div className={`${styles.headerContainer} flex`}>
+      <div className={`${styles.headerContainer}  `}>
         <AnimatePresence>
-          {loading ? (
-            <Loader setLoading={setLoading} />
-          ) : (
-            <>
-              {!loading && (
-                <div className={styles.transitionImageContainer}>
-                  <motion.img
-                    className={styles.transitionImage}
-                    transition={{
-                      ease: [0.6, 0.01, -0.05, 0.9],
-                      duration: 1.6,
-                    }}
-                    src={images[4].src}
-                    layoutId="main-image-1"
-                  />
-                </div>
-              )}
-            </>
-          )}
+          {loading && <Loader setLoading={setLoading} />}
         </AnimatePresence>
+
+        {!loading && (
+          <div className="flex">
+            <Banner />
+            <motion.img
+              layoutId="img"
+              src={images[4].src}
+              className={styles.transitionImage}
+            />
+          </div>
+        )}
       </div>
     </section>
   );
 }
+function Banner() {
+  return (
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ delay: 2 }}
+    >
+      <div className={styles.bannerRow}>
+        <div>
+          <AnimatedLetters letter={"Brand"} />
+        </div>
+        <motion.div
+          initial={{ opacity: 0, y: 80 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{
+            ease: "easeInOut",
+            duration: 1,
+            delay: 0.4,
+          }}
+          className="row-col"
+        >
+          <span className="row-message">
+            We are specialised in setting up the foundation of your brand and
+            setting you up for success.
+          </span>
+        </motion.div>
+      </div>
+    </motion.div>
+  );
+}
 
+function AnimatedLetters({ letter }) {
+  return <div>{letter}</div>;
+}
 function Loader({ setLoading }) {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 3400);
+    }, 3800);
   }, [setLoading]);
+
   const itemMain = {
     initial: { y: 200, x: "50%", opacity: 0 },
     show: {
@@ -56,10 +83,11 @@ function Loader({ setLoading }) {
       className={styles.imgContainer}
       initial="initial"
       animate="show"
+      exit="exit"
     >
       <ImgBlock srcId={1} /> {/* small-img */}
       <motion.img
-        layoutId="main-image-1"
+        layoutId="img"
         className={`${styles.mainImg} ${styles.img}`}
         variants={itemMain}
         transition={{
@@ -69,7 +97,6 @@ function Loader({ setLoading }) {
         }}
         src={images[4].src}
         id="img-2"
-        custom={2}
       />
       <ImgBlock srcId={3} /> {/* big-img */}
       <ImgBlock srcId={4} /> {/* small-img */}
@@ -84,7 +111,7 @@ function ImgBlock({ srcId, variants }) {
       variants={variants}
       initial={{ y: 100, opacity: 0 }}
       animate={{
-        y: "-15%",
+        y: srcId == 1 || srcId == 4 ? -40 : -80,
         opacity: srcId * 0.7,
       }}
       exit={{
@@ -92,7 +119,7 @@ function ImgBlock({ srcId, variants }) {
         y: -200,
         transition: {
           ease: "easeInOut",
-          duration: 0.8,
+          duration: 0.5,
         },
       }}
       transition={{
@@ -114,4 +141,8 @@ ImgBlock.propTypes = {
 
 Loader.propTypes = {
   setLoading: PropTypes.function,
+};
+
+AnimatedLetters.propTypes = {
+  letter: PropTypes.string,
 };
