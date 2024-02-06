@@ -1,19 +1,79 @@
 .headerContainer {
-  height: 90vh;
+  height: 80vh;
   width: 100%;
-  border: 1px solid gray;
   overflow: hidden;
   position: relative;
+  background-color: #f0eff1;
+  color: #24242a;
+  padding: 2rem;
+}
+/* banner */
+.bannerContainer {
+  z-index: 100;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.bannerRow {
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 90%;
+  height: 12rem;
+}
+.bannerRow:nth-child(2) {
+  width: 180%;
+}
+.bannerRow:nth-child(3) {
+  width: 55%;
+  margin-left: 16rem;
+  align-items: center;
+  position: absolute;
+  left: -4%;
+  top: 22rem;
 }
 
+.rowLetter {
+  font-size: clamp(2.8rem, 1rem + 8vw, 13rem);
+  font-weight: 500;
+  position: relative;
+  letter-spacing: 0.1rem;
+  display: inline-block;
+  word-wrap: unset;
+}
+.rowMessage {
+  display: inline-block;
+  font-weight: 500;
+  font-size: 1.2vw;
+  line-height: 2rem;
+  width: 200px;
+}
+.scroll {
+  height: 8vw;
+  width: 8vw;
+  border-radius: 100%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  left: 160px;
+}
 .transitionImage {
   position: absolute;
   opacity: 0.9;
-  top: 60%;
+  top: 69%;
   border-radius: 2em;
   width: 80%;
   height: 80%;
   object-fit: cover;
+  opacity: 0.8;
 }
 .imgContainer {
   position: relative;
@@ -66,4 +126,15 @@
   height: 32%;
 
   bottom: 4%;
+}
+
+@media screen and (max-width: 930px) {
+  .rowMessage {
+    font-size: 1.5vw;
+  }
+}
+@media screen and (max-width: 630px) {
+  .rowMessage {
+    font-size: 1.8vw;
+  }
 }

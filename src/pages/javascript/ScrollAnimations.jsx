@@ -1,5 +1,4 @@
-// import HeaderParallelScroll from "./fullPageAnimations/heroParallelScroll/HeaderParallelScroll";
-import ParallexScroll from "./fullPageAnimations/parallexScrollImageScaling/ParallesScroll";
+import HeaderParallelScroll from "./fullPageAnimations/heroParallelScroll/HeaderParallelScroll";
 
 // import Lenis from "@studio-freight/lenis";
 
@@ -14,8 +13,7 @@ export default function Javascript() {
   // requestAnimationFrame(raf);
   return (
     <div>
-      {/* <HeaderParallelScroll /> */}
-      <ParallexScroll />
+      <HeaderParallelScroll />
     </div>
   );
 }

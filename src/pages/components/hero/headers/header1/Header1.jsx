@@ -29,39 +29,86 @@ export default function Header1() {
     </section>
   );
 }
+const banner = {
+  animate: {
+    transition: {
+      delayChildren: 0.4,
+      staggerChildren: 0.1,
+    },
+  },
+};
+
+const letterAni = {
+  initial: { y: 400 },
+  animate: {
+    y: 0,
+    transition: {
+      ease: [0.6, 0.01, -0.05, 0.95],
+      duration: 1,
+    },
+  },
+};
 function Banner() {
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ delay: 2 }}
-    >
-      <div className={styles.bannerRow}>
-        <div>
-          <AnimatedLetters letter={"Brand"} />
-        </div>
-        <motion.div
-          initial={{ opacity: 0, y: 80 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{
-            ease: "easeInOut",
-            duration: 1,
-            delay: 0.4,
-          }}
-          className="row-col"
-        >
-          <span className="row-message">
+    <motion.div className={`${styles.bannerContainer}`} variants={banner}>
+      <div className={`${styles.bannerRow} flex`}>
+        <AnimatedLetters letter={"Brand"} />
+
+        <motion.div className="row-col">
+          <motion.span
+            className={styles.rowMessage}
+            initial={{ opacity: 0, y: 80 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+              ease: "easeInOut",
+              duration: 1,
+              delay: 0.4,
+            }}
+          >
             We are specialised in setting up the foundation of your brand and
             setting you up for success.
-          </span>
+          </motion.span>
         </motion.div>
+      </div>
+      <div className={`${styles.bannerRow} flex`}>
+        <AnimatedLetters letter={"experience"} />
+        <AnimatedLetters letter={"experience"} />
+      </div>
+      <div className={`${styles.bannerRow} flex`}>
+        <motion.div className={styles.rowCol}>
+          <motion.span
+            className={`${styles.rowMessage} ${styles.scroll}`}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{
+              ease: "easeInOut",
+              duration: 1,
+              delay: 1.8,
+            }}
+          >
+            scroll
+          </motion.span>
+        </motion.div>
+        <AnimatedLetters letter={"studio"} />
       </div>
     </motion.div>
   );
 }
 
 function AnimatedLetters({ letter }) {
-  return <div>{letter}</div>;
+  return (
+    <motion.span variants={banner} initial="initial" animate="animate">
+      {[...letter].map((letter, i) => (
+        <motion.span
+          key={`letter-${i}`}
+          className={styles.rowLetter}
+          variants={letterAni}
+        >
+          {letter}
+        </motion.span>
+      ))}
+    </motion.span>
+  );
 }
 function Loader({ setLoading }) {
   useEffect(() => {

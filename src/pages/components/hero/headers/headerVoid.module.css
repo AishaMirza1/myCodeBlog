@@ -64,3 +64,22 @@
     margin-bottom: 2rem;
   }
 }
+@media (max-width: 659px) {
+  .headerVoidContainer {
+    height: 550px;
+    overflow: hidden;
+  }
+  .headerContent p {
+    color: rgba(255, 255, 255, 0.397);
+    line-height: 1.5;
+    letter-spacing: 0.8px;
+    margin-bottom: 4rem;
+    margin-inline: 2rem;
+  }
+  .headerContent {
+    padding: 2rem 1rem;
+  }
+  .headerContent h1 {
+    margin-bottom: 8rem;
+  }
+}
