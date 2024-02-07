@@ -8,6 +8,7 @@ import Menu from "./pages/components/menus/Menu";
 import FormsContainer from "./pages/components/forms/FormsContainer";
 import TextAnimationsMain from "./pages/components/text/TextAnimationsMain";
 import Buttons from "./pages/components/buttons/Buttons";
+import Loader from "./pages/components/loaders/Loader";
 import AllComponentsCardsContainer from "./pages/components/AllComponentsCardsContainer";
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
             <Route path="forms" element={<FormsContainer />} />
             <Route path="text" element={<TextAnimationsMain />} />
             <Route path="buttons" element={<Buttons />} />
+            <Route path="loaders" element={<Loader />} />
           </Route>
 
           <Route path="/scroll-animations" element={<ScrollAnimations />} />
