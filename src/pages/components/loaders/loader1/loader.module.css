@@ -1,33 +1,60 @@
 .loader {
   height: 50vh;
   border-radius: 2em;
-  background-color: #ed3a51;
+  background-color: #001219;
   position: relative;
 }
 .loader span {
-  width: 60px;
-  height: 60px;
-  border: 6px solid #ed3a51;
+  width: 40px;
+  height: 40px;
+  border: 4px solid #001219;
   border-radius: 50%;
-  border-left: 6px solid #fff;
-  border-top: 6px solid #fff;
+  border-left: 4px solid #ff0000;
+  border-top: 4px solid #ff0000;
   rotate: 43deg;
   position: absolute;
   animation: spin 2000ms cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite;
 }
 .loader span:nth-child(2) {
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
+  border-top-color: #ff7f00;
+  border-left-color: #ff7f00;
   animation-delay: -50ms;
 }
 .loader span:nth-child(3) {
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
+  border-top-color: #ffff00;
+  border-left-color: #ffff00;
   animation-delay: -100ms;
 }
 .loader span:nth-child(4) {
+  width: 100px;
+  height: 100px;
+  border-top-color: #00ff00;
+  border-left-color: #00ff00;
+  animation-delay: -150ms;
+}
+.loader span:nth-child(5) {
   width: 120px;
   height: 120px;
+  border-top-color: #0000ff;
+  border-left-color: #0000ff;
+  animation-delay: -150ms;
+}
+.loader span:nth-child(6) {
+  width: 140px;
+  height: 140px;
+  border-top-color: #4b0082;
+  border-left-color: #4b0082;
+  animation-delay: -150ms;
+}
+.loader span:nth-child(7) {
+  width: 160px;
+  height: 160px;
+  border-top-color: #9400d3;
+  border-left-color: #9400d3;
   animation-delay: -150ms;
 }
 @keyframes spin {
@@ -44,8 +71,6 @@
   .loader span {
     width: 20px;
     height: 20px;
-    border-left: 3px solid #fff;
-    border-top: 3px solid #fff;
   }
   .loader span:nth-child(2) {
     width: 40px;

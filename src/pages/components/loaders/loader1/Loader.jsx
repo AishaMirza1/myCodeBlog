@@ -4,8 +4,11 @@ import styles from "./loader.module.css";
 export default function Loader1() {
   return (
     <section>
-      <Heading2 text="Loader" />
+      <Heading2 text="Rainbow Loader" />
       <div className={`${styles.loader} flex`}>
+        <span></span>
+        <span></span>
+        <span></span>
         <span></span>
         <span></span>
         <span></span>

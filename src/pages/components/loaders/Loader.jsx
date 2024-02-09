@@ -6,8 +6,8 @@ export default function Loader() {
   return (
     <main>
       <MainComponentsHeader heading="Loaders" />
-      <Loader1 />
       <Loader2 />
+      <Loader1 />
     </main>
   );
 }

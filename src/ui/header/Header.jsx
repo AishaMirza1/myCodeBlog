@@ -6,7 +6,6 @@ import MobileNav from "./MobileNav";
 import { useEffect, useState } from "react";
 export default function Header() {
   const [windowSize, setWindowSize] = useState(window.innerWidth);
-  console.log(windowSize);
   useEffect(() => {
     function updateSize() {
       setWindowSize(window.innerWidth);
