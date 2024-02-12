@@ -7,6 +7,7 @@ export default function Loader() {
     <main>
       <MainComponentsHeader heading="Loaders" />
       <Loader2 />
+
       <Loader1 />
     </main>
   );

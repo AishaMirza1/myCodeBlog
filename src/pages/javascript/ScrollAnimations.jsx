@@ -11,6 +11,7 @@ export default function Javascript() {
   // }
 
   // requestAnimationFrame(raf);
+  console.log("page 1 loaded");
   return (
     <div>
       <HeaderParallelScroll />
