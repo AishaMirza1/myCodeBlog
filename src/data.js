@@ -14,10 +14,7 @@ export const sideNavLinks = [
     title: "Hero",
     href: "hero",
   },
-  {
-    title: "Menu",
-    href: "menu",
-  },
+
   {
     title: "Buttons",
     href: "buttons",
@@ -27,11 +24,19 @@ export const sideNavLinks = [
     href: "loaders",
   },
   {
+    title: "Accordian",
+    href: "accordians",
+  },
+  {
     title: "Text",
     href: "text",
   },
   {
     title: "Forms",
     href: "forms",
+  },
+  {
+    title: "Menu",
+    href: "menu",
   },
 ];

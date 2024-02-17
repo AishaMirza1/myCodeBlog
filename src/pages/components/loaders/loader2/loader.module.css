@@ -4,7 +4,6 @@
   background-color: #000000;
   position: relative;
   gap: 2px;
-  margin-bottom: 30vh;
 }
 .loader span {
   width: 30px;
@@ -12,4 +11,9 @@
   position: relative;
   display: inline-block;
   background-color: #fff;
+}
+@media screen and (max-width: 500px) {
+  .loader {
+    height: 30vh;
+  }
 }

@@ -19,6 +19,7 @@ const Loader = lazy(() => import("./pages/components/loaders/Loader"));
 const AllComponentsCardsContainer = lazy(() =>
   import("./pages/components/AllComponentsCardsContainer")
 );
+import Accordian from "./pages/components/accordian/Accordian";
 function App() {
   return (
     <div>
@@ -35,6 +36,7 @@ function App() {
               <Route path="text" element={<TextAnimationsMain />} />
               <Route path="buttons" element={<Buttons />} />
               <Route path="loaders" element={<Loader />} />
+              <Route path="accordians" element={<Accordian />} />
             </Route>
 
             <Route path="/scroll-animations" element={<ScrollAnimations />} />

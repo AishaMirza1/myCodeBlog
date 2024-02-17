@@ -49,22 +49,11 @@ function Card({ card }) {
           className={styles.cardOverlay}
           transition={{ duration: 0.35, ease: "easeInOut" }}
         ></motion.div>
-        <img src={card.svg} />
         <motion.span
           animate={hovered ? { color: "#fff" } : { color: "#0f172a" }}
         >
           {card.title}
         </motion.span>
-        <motion.img
-          transition={{ duration: 0.35, ease: "easeInOut" }}
-          animate={
-            hovered
-              ? { transform: "rotate(30deg)" }
-              : { transform: "rotate(0deg)" }
-          }
-          src={card.svg}
-          className={styles.bigsvg}
-        />
       </NavLink>
     </motion.div>
   );

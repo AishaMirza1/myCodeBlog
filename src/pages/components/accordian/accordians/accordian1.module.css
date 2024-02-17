@@ -1,0 +1,54 @@
+.accordian1 {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  padding: 20px;
+  font-family: sans-serif;
+  border: 1px solid #dadada;
+  margin-bottom: 20vh;
+}
+.accordianContainer {
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.accordian1 h3 {
+  font-size: 2.875rem;
+  line-height: 2.25rem;
+  font-weight: 600;
+  margin-bottom: 3rem;
+}
+.accordianItem {
+  width: 60vw;
+  margin-bottom: 2rem;
+  cursor: pointer;
+  user-select: none;
+  border-bottom: 1px solid #dadada;
+}
+.questionContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.questionContainer svg {
+  font-size: 2.4rem;
+}
+.accordianContainer .title {
+  font-weight: 500;
+  font-size: 2.125rem;
+  line-height: 1.75rem;
+  padding: 2rem 0;
+}
+.description {
+  overflow: hidden;
+}
+.accordianContainer .description p {
+  width: 96%;
+  color: #475569;
+  line-height: 2.75rem;
+  font-size: 1.8rem;
+  font-weight: 400;
+}
