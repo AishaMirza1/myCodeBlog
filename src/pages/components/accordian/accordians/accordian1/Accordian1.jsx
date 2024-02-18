@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Heading2 from "../../../../ui/Heading2";
+import Heading2 from "../../../../../ui/Heading2";
 import { IoIosArrowDown } from "react-icons/io";
 import styles from "./accordian1.module.css";
 import { AnimatePresence, motion } from "framer-motion";
