@@ -2,7 +2,8 @@ import styles from "./accordian.module.css";
 import Heading2 from "../../../../../ui/Heading2";
 import { IoIosArrowDown } from "react-icons/io";
 import { useState } from "react";
-
+import { AnimatePresence, motion } from "framer-motion";
+import { IconContext } from "react-icons";
 export default function Accordian() {
   const [selected, setSelected] = useState(null);
 
@@ -11,31 +12,63 @@ export default function Accordian() {
     id === selected ? setSelected(null) : setSelected(id);
   }
   console.log(selected);
+  const btnVariants = {
+    initial: { transform: "rotate(-90deg)" },
+    enter: { backgroundColor: "#4a3aff", transform: "rotate(0deg)" },
+    exit: { transform: "rotate(-90deg)" },
+  };
+  const answerVariants = {
+    initial: { height: 0 },
+    enter: { height: "fit-content" },
+    exit: { height: 0 },
+  };
+  const answerParaVariants = {
+    initial: { opacity: 0, top: "-35px" },
+    enter: { opacity: 1, top: "0px", transition: { delay: 0.13 } },
+    exit: { opacity: 0, top: "-35px" },
+  };
   return (
     <div>
       <Heading2 text="Webflow Template Accordian" />
       <div className={`${styles.accordianContainerOuter}`}>
-        {items.map((item) => {
-          return (
-            <div
-              key={`faq-${item.id}`}
-              className={`${styles.accordianItem} flex`}
-              onClick={() => handleClick(item.id)}
-            >
-              <div className={`${styles.faqQuestionContainer}`}>
-                <h3>{item.title}</h3>
-                <span className="flex">
-                  <IoIosArrowDown />
-                </span>
-              </div>
-              {selected === item.id && (
-                <div className={styles.faqAnsContainer}>
-                  <p>{item.description}</p>
+        <AnimatePresence>
+          {items.map((item) => {
+            return (
+              <motion.div
+                initial="initial"
+                animate={selected === item.id ? "enter" : null}
+                exit="exit"
+                key={`faq-${item.id}`}
+                className={`${styles.accordianItem} flex`}
+                onClick={() => handleClick(item.id)}
+              >
+                <div className={`${styles.faqQuestionContainer}`}>
+                  <h3>{item.title}</h3>
+                  <motion.span className="flex" variants={btnVariants}>
+                    <IconContext.Provider
+                      value={
+                        selected === item.id
+                          ? { color: "#fff" }
+                          : { color: "#4a3aff" }
+                      }
+                    >
+                      <IoIosArrowDown />
+                    </IconContext.Provider>
+                  </motion.span>
                 </div>
-              )}
-            </div>
-          );
-        })}
+
+                <motion.div
+                  variants={answerVariants}
+                  className={styles.faqAnsContainer}
+                >
+                  <motion.p variants={answerParaVariants}>
+                    {item.description}
+                  </motion.p>
+                </motion.div>
+              </motion.div>
+            );
+          })}
+        </AnimatePresence>
       </div>
     </div>
   );

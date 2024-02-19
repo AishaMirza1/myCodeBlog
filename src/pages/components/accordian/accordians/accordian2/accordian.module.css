@@ -37,17 +37,16 @@
 .faqQuestionContainer span {
   width: 4rem;
   height: 4rem;
-  background-color: #fff;
   border-radius: 50%;
-  rotate: -90deg;
+
   box-shadow: 0px -2px 9px 0.4px #00000018;
 }
 .faqQuestionContainer span svg {
   font-size: 3rem;
-  color: #4a3aff;
 }
 .faqAnsContainer {
   max-width: 95%;
+  overflow: hidden;
 }
 .faqAnsContainer p {
   color: #6f6c90;
@@ -55,9 +54,10 @@
   margin-top: 18px;
   margin-bottom: 0px;
   line-height: 1.2;
+  position: relative;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 900px) {
   .faqQuestionContainer h3 {
     font-size: 2.1rem;
   }
